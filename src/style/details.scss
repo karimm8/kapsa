@@ -1,0 +1,135 @@
+@import './index.scss';
+.details{
+    margin-top: 20px;
+    .carousel{
+        height: 415px;
+        position: relative;
+        margin-bottom: 20px;
+        .cover{
+            width: 100%;
+            height: 100%;
+            object-fit:cover;
+            border-radius: 20px;
+            filter:brightness(70%);
+        }
+        .arrow{
+            position: absolute;
+            transform: translateY(-50%);
+            top: 50%;
+            z-index: 33;
+            cursor: pointer;
+            width: 50px;
+        }
+        .arrow-left{
+            left: 5%;
+            transform: rotate(90deg);
+        }
+        .arrow-right{
+            right: 5%;
+            transform: rotate(-90deg);
+        }
+        .counter{
+            position: absolute;
+            transform: translateX(-50%);
+            left:50%;
+            bottom: 5%;
+            color: white;
+        }
+    }
+    .sup-info{
+        display: flex;
+        justify-content: space-between;
+        .title h2{
+            color: $text-color;
+            font-size: 36px;
+            font-weight:$text-weight;
+        }
+        .title p{
+            font-size: 18px;
+            font-weight: $text-weight;
+            color: $text-color;
+            margin: 15px 0;
+        }
+        .title .btn{
+            display: flex;
+            flex-wrap: wrap;
+            width:400px ;
+            gap: 15px;
+        }
+        .title button{
+            width: 115px;
+            background-color: $text-color;
+            color: white;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+            padding: 10px 0;
+        }
+        .profil .header{
+            margin-bottom: 20px;
+            display: flex;
+            gap: 10px;
+            color: $text-color;
+        }
+        .profil .header img{
+            border-radius: 50%;
+            width: 64px;
+        }
+        .profil .etoil {
+            display: flex;
+            justify-content: end;
+        }
+    }
+    ul{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        margin-top: 30px;
+        li{
+            width: 80%;
+            background-color:$text-color ;
+            color: white;
+            font-size:$text-size;
+            font-weight:$text-weight;
+            padding: 15px;
+            padding-left: 20px;
+            display: flex;
+            justify-content: space-between;
+            border-radius: 5px;
+            .arrow{
+                cursor: pointer;
+            }
+        }
+        .show{
+            width: 80%;
+            background-color: #f7f7f7;
+            color: $text-color;
+            animation: slide_description 1.2s ease-in-out forwards;
+            border-radius: 0 0 5px 5px;
+            font-size: 1.5rem;
+            font-weight: 400;
+            line-height: 2.14rem;
+            padding: 20px;
+        }
+    }
+}
+ 
+@media(max-width:575px){
+    .details .sup-info .title .btn{
+        margin: 0 auto;
+    }
+    .details .title .btn button{
+        width: 100%;
+    } 
+    .sup-info{
+        flex-direction: column;
+        gap: 30px;
+    }
+    .profil .header{
+        justify-content: end;
+    }
+}
+    
+   
