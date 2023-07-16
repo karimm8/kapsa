@@ -8,6 +8,10 @@ export default function Details() {
   const [active1,setActive1] = useState(false)
   const [active2,setActive2] = useState(false)
   const [counter,setCounter] = useState(0)
+
+  const decr = () => {
+    
+  }
   const hun1 = () => {
     setActive1(!active1)
     setShow1(!show1)
@@ -36,7 +40,7 @@ export default function Details() {
               <img src={details.pictures[counter]} alt={details.pictures[counter]} className='cover' />
               <img src='https://kasa-vq.netlify.app/static/media/arrow.b052dd29e3a2bab76700eee79e133c37.svg' alt='image' className='arrow arrow-right' onClick={next}/>
               <span className='counter'>
-              {details.pictures.indexOf(details.pictures[counter])}/{details.pictures.length} 
+              {details.pictures.indexOf(details.pictures[counter])+1}/{details.pictures.length} 
               </span>
         </div>
         <div className='info'>
