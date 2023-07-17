@@ -9,9 +9,6 @@ export default function Details() {
   const [active2,setActive2] = useState(false)
   const [counter,setCounter] = useState(0)
 
-  const decr = () => {
-    
-  }
   const hun1 = () => {
     setActive1(!active1)
     setShow1(!show1)
@@ -65,12 +62,12 @@ export default function Details() {
                           <p className='profil'>{details.host.name}</p>
                           <img src={details.host.picture} alt={details.host.picture} />
                     </div>
-                    <div className='etoil'>
-                         <img src='https://kasa-vq.netlify.app/static/media/fullStar.6430150c126a3adf92c132c52c9c7428.svg' alt='image'/>
-                         <img src='https://kasa-vq.netlify.app/static/media/fullStar.6430150c126a3adf92c132c52c9c7428.svg' alt='image'/>
-                         <img src='https://kasa-vq.netlify.app/static/media/fullStar.6430150c126a3adf92c132c52c9c7428.svg' alt='image'/>
-                         <img src='https://kasa-vq.netlify.app/static/media/fullStar.6430150c126a3adf92c132c52c9c7428.svg' alt='image'/>
-                         <img src='https://kasa-vq.netlify.app/static/media/fullStar.6430150c126a3adf92c132c52c9c7428.svg' alt='image'/>
+                    <div className='etoil'> 
+                    
+                    {new Array(parseInt(details.rating)).fill(0).map(item => <img src="https://kasa-vq.netlify.app/static/media/fullStar.6430150c126a3adf92c132c52c9c7428.svg" /> ) }
+
+                    {new Array(5 - parseInt(details.rating)).fill(0).map(item => <img src="https://kasa-vq.netlify.app/static/media/emptyStar.7e4ba6032d7d80ecc30aa389973cef95.svg" /> )}
+
                     </div>
                   </div>
              </div>
