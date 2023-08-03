@@ -14,8 +14,8 @@ function App() {
                         <img width={180} height={68} src='https://kasa-vq.netlify.app/static/media/logoHeader.28bcdc5933dc39a590d83eb2133ce13c.svg'/>
                   </Link>
                   <ul>
-                          <Link className='link1'  to={"/"} target="_blank">Accueil</Link>
-                          <Link className='link1 link2' to={"/compenent/propos"} target="_blank">A Propos</Link>
+                          <Link className='link1'  to={"/"} >Accueil</Link>
+                          <Link className='link1 link2' to={"/compenent/propos"} >A Propos</Link>
                   </ul>
              </div>
              <Routes>
